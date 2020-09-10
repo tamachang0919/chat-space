@@ -1,0 +1,29 @@
+.main_chat
+  .main_chat_head
+    .groupName
+      .main_chat_head__groupname
+        レジスタンス
+      %ul.memberList
+        ともき
+        %li.member
+          玉尾僚基
+    = link_to '#',class: "RightHeader__editButton" do
+      Edit
+  .main_chat_messages
+    .messagebox
+      .messageinfo
+        .messageinfo__username
+          玉尾僚基
+        .messageinfo__date
+          2020/8/29 17:56
+      .message
+        %p.message__content
+          こんにちは
+  .main_chat_form
+    %form.Form
+      .Form__contents
+        %input.Form__inputContent{type: 'text', placeholder: 'type a message'}
+        %label.Form__inputImage
+          = icon('far', 'image', class: 'Form__icon')
+          %input.Hidden{type: 'file'}
+      %input.Form__submit{type: 'submit', value: 'Send'}    
